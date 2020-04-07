@@ -30,7 +30,7 @@ RUN pip3 install buildbot-console-view
 RUN pip3 install psycopg2-binary
 # RUN pip install buildbot-worker
 RUN adduser buildbot --disabled-password
-RUN chown buildbot.buildbot /srv/buildbot
+RUN chown -Rv buildbot.buildbot /srv/buildbot
 
 USER buildbot
 WORKDIR /srv/buildbot
