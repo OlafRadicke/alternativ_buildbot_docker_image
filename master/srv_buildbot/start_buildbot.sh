@@ -40,6 +40,11 @@ else
         done
     fi
 fi
+
+echo "##########  config value begin ##############"
+cat $B/master.cfg
+echo "##########  config value end ################"
+
 # copy the default buildbot.tac if not provided by the config
 if [ ! -f $B/buildbot.tac ]
 then

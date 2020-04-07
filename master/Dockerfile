@@ -34,5 +34,6 @@ RUN chown buildbot.buildbot /srv/buildbot
 
 USER buildbot
 WORKDIR /srv/buildbot
+RUN ls -lah
 
 CMD ["dumb-init", "/srv/buildbot/start_buildbot.sh"]
