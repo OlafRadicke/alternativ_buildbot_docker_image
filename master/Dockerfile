@@ -14,8 +14,8 @@ RUN apk add --no-cache \
         gcc \
         musl-dev \
         libffi-dev \
-        libressl-dev 
-        # postgresql-dev
+        libressl-dev \
+        postgresql-dev 
         # alpine-sdk \
         # tar \
         # tzdata \
@@ -27,9 +27,8 @@ RUN pip3 install buildbot==2.7.0
 RUN pip3 install buildbot-www
 RUN pip3 install buildbot-waterfall-view
 RUN pip3 install buildbot-console-view
+RUN pip3 install psycopg2-binary
 # RUN pip install buildbot-worker
-# RUN mkdir -p /var/lib/buildbot/
-# RUN cp /srv/buildbot/master.cfg /var/lib/buildbot/master.cfg
 RUN adduser buildbot --disabled-password
 RUN chown buildbot.buildbot /srv/buildbot
 
