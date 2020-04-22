@@ -1,13 +1,8 @@
 
-
-
-
-
 FROM        fedora:31
 MAINTAINER  Olaf radicke
 
 RUN echo "buildbot	ALL=(ALL)	NOPASSWD: ALL" >> /etc/sudoers
-# Install security updates and required packages
 
 RUN dnf install -y dnf-plugins-core \
     rpm-build \
@@ -20,9 +15,8 @@ RUN dnf install -y dnf-plugins-core \
     libssh2-devel \
     perl-generators \
     slang-devel \
-    make
-
-RUN dnf install -y git \
+    make \
+    git \
     python3-devel \
     libffi-devel \
     openssl-devel \
