@@ -1,0 +1,1 @@
+The image serves as a worker for BuildBot and is based on fedora. It does not use the root user, but the user buildbot can install packages via sudo.
