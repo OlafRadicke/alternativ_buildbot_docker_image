@@ -20,7 +20,7 @@ RUN         apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     pip3 --no-cache-dir install 'twisted[tls]' && \
     pip3 install virtualenv && \
-    pip3 install buildbot-worker && \
+    pip3 install buildbot-worker==2.7 && \
     mkdir /buildbot && \
     useradd -ms /bin/bash buildbot
 

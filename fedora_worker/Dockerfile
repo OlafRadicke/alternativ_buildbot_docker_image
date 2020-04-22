@@ -27,14 +27,11 @@ RUN dnf install -y dnf-plugins-core \
     
 RUN pip3 --no-cache-dir install 'twisted[tls]' && \
     pip3 install virtualenv && \
-    pip3 install buildbot-worker && \
+    pip3 install buildbot-worker==2.7 && \
     mkdir /buildbot && \
     useradd -ms /bin/bash buildbot
-
-
 COPY buildbot.tac /buildbot/buildbot.tac
-
-# USER buildbot
+RUN chown -R buildbot.buildbot /buildbot
 WORKDIR /buildbot
 USER buildbot
 

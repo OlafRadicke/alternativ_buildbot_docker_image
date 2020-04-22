@@ -23,7 +23,7 @@ RUN apk add --no-cache \
         # postgresql-libs \
 
 RUN pip3 install --upgrade pip
-RUN pip3 install buildbot==2.7.0
+RUN pip3 install buildbot==2.7
 RUN pip3 install buildbot-www
 RUN pip3 install buildbot-waterfall-view
 RUN pip3 install buildbot-console-view
